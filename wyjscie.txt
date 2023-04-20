@@ -1,3 +1,11 @@
+Liczba Smith'a
+Liczba Smith'a
+Liczba Smith'a
+Nie jest to liczba
+Liczba Smith'a
+Liczba Smith'a
+Liczba Smith'a
+Liczba Smith'a
 Zwykla liczba
 Zwykla liczba
 Zwykla liczba
@@ -6,9 +14,11 @@ Zwykla liczba
 Nie jest to liczba
 Zwykla liczba
 Nie jest to liczba
-Nie jest to liczba
+Zwykla liczba
 Liczba Smith'a
 Liczba Smith'a
 Zwykla liczba
 Nie jest to liczba
 Liczba Smith'a
+Zwykla liczba
+Zwykla liczba

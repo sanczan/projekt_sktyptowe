@@ -27,7 +27,7 @@ def is_smith(numba):  # główna funkcja sprawdzająca, czy liczba jest liczbą 
     suma = sum_f(num)
     div = sum_f(divider(num))
 
-    if suma == div:
+    if suma == div and numba != '0':
         return True
     else:
         return False

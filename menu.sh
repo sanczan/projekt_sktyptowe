@@ -26,9 +26,15 @@ printf "${NC}";
 read -n 1 -s wybor;
 case $wybor in 
 "1")
+    FILE=/home/sanczan/projekt/wejscie.txt
+    if [ -f "$FILE" ]; then
     wejscie="wejscie.txt"
     python3 smith.py "$wejscie"
-    echo "Algorytm wykonany pomyslnie";
+    echo "Algorytm wykonano pomyslnie";
+    else 
+    echo "Plik wejsciowy 'wejscie.txt' nie istnieje"
+    echo "algorytm wykonano niepomyslnie"
+    fi
     pause;
     menu;
     ;;
@@ -50,15 +56,22 @@ case $wybor in
 
     printf -v date '%(%d-%m-%Y-%H:%M:%S)T\n' -1
     mkdir backup/$date
-
-    cp ../projekt/*.txt backup/$date
+    
+    
+    html=../projekt/raport.html
+    txt1=../projekt/wejscie.txt
+    txt2=../projekt/wyjscie.txt
+    if [ -f "$html" ] && [ -f "$txt1" ] && [ -f "$txt2" ]; then
     cp ../projekt/*.html backup/$date
+    cp ../projekt/*.txt backup/$date
     cp ../projekt/*.css backup/$date
-
-    echo "Kopia pliku HTML zostala utworzona"
+    echo "Kopia z dostepnych plikow zostala zakonczona"
+    else 
+    echo "Brak wymaganych plikow."
+    fi
 
     printf "${RED}";
-    echo "Kopia ukonczona";
+    echo "Backup zakonczyl dzialanie";
     printf "${NC}";
     pause;
         menu;
